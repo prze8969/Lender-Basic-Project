@@ -58,5 +58,123 @@ Okay so all of my thought process will be there here
 
     # Lets begin
 
-    Phase 0: writing this readme, this will be committed and then after the phase 1 will start
-    
+    # Phase 0: 
+    writing this readme, this will be committed and then after the phase 1 will start
+
+    ---
+    # Phase 1:
+        writing the user flow
+
+        the basic user flow will be
+            1.  Lender :
+                - connect the wallet
+                - deposit their tokens
+                - see what lifecycle their tokens are in
+                - book return of money/ withdrawal
+            2. Borrower
+                - connect wallet
+                - borrow money, put in details
+                    - details contain:
+                        - wallet address
+                        - time period
+                        - collateral to be given
+                - transfer collateral
+                - receive usdc
+                - get a time limit until the payment other wise liquid
+                - make them agree to the terms and conditions
+                - monitor loan
+                - repay the loan with appropriate interest
+                - return their collateral
+                - liquidation if required
+            3. Admin:
+                - fund the pool with 1000 usdc (for mock purposes)
+                - blacklist a borrower or lender
+                - monitor loans
+                - execute liquidity
+                - make changes in "looks" of the main dashboard
+
+
+
+
+    # Phase 2:
+        writing the code
+        insane.
+
+        used to write full fledged html css js and php apps before
+        what tf is this
+
+        okay i got the basics, to create a app in our directory 
+
+        first install npm 
+        then do npx create-next-app@latest "ur source directory"
+
+        I SEARCHED THROUGH OUT THE DOCUMENTATION PAGE THERE WASNT A SINGLE MENTION OF THE SOURCE DIRECTORY
+
+        wasted an hour
+        searched google and found it
+
+        wow it launched with its basic next js landing page
+
+        it works ig?
+
+        hard part
+        go into app/.
+        delete all
+        since all of it is just next js basic landing page things
+
+
+        okay done
+
+        now make page.tsx right? yea
+
+        okay now lets try smt each
+        lets write hello world
+
+        wrote 
+        ```
+        const message: string = "Hellow world";
+        alert(message);
+        ```
+
+        the site was running non stop due to nodemon heh
+        ```
+        Error: page.tsx doesn't have a root layout. To fix this error, make sure every page has a root layout. 
+        ```
+        WHAAAAAAT
+        WHY DOES IT NEED LAYOUT BRUH
+
+        HOW TO MAKE LAYOUT
+
+        oh easy just create layout.tsx
+
+        okay it should work right??
+
+        ```
+                ⨯ ReferenceError: alert is not defined
+            at Object.eval (app\page.tsx:2:1)
+            at module evaluation (C:\Users\Pranav Shewale\lender-basic-project\.next\dev\server\chunks\ssr\[root-of-the-server]__0g1_yi1wvm5m-._.js:184:47)
+        1 | const message: string = "Hellow world";
+        > 2 | alert(message);
+            | ^ {
+        page: '/'
+        }
+        GET / 500 in 74ms (next.js: 54ms, application-code: 20ms)
+        [browser] Uncaught ReferenceError: alert is not defined
+            at Object.eval (app\page.tsx:2:1)
+            at module evaluation (app/page.tsx:2:7)
+        1 | const message: string = "Hellow world";
+        > 2 | alert(message);
+            | ^
+    ```
+
+    WHAT IN THE ACTUAL F ***
+
+    ALERT ISNT DEFINED???????? HELLO??
+    ISNT TYPESCRIPT WRITEN OVER JAVASCRIPT??
+
+    im done for today too much work done
+
+    i cant believe that i used to make working demo in hours in this specific tech stack
+    yet i cant even deploy the basic code damn
+
+    i guess the fullstack development isnt that easy afterall
