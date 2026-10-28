@@ -207,3 +207,127 @@ i cant believe that i used to make working demo in hours in this specific tech s
 yet i cant even deploy the basic code damn
 
 i guess the fullstack development isnt that easy afterall
+
+
+
+Day 2: tried to make the layout.tsx, very fcking hard
+
+somehow got what to do 
+
+basically each file has an "export" "default" function 
+
+so i first imported the global.css and metadata from next and link from next
+
+
+then first i created the metadata storage thing 
+
+its not a function its just a constant datatype
+
+its like
+
+```typescript
+export const metadata : Metadata = {...};
+```
+and then inside metadata named const, i added title and description
+in the style of python dictionaries
+
+```typescript
+export const metadata : Metadata = {
+  title : "............",
+  description : ".............",
+};
+```
+
+and yes dont forget the infamous ";"
+
+
+now then i created smt called as RootLayout function
+ 
+i guess it is used for considering the layout of the page and how
+it should have the elements in , since a large part of frontend depends 
+on its children and parent elements
+
+so we define a function 
+```typescript
+export default function RootLayout(){};
+```
+
+and for the paramenters to pass, 
+its something like 
+```typescript
+{children , } : {children : React.ReactNode;}
+```
+
+
+tbh i dont got time to explain this since its literally 1:27 am right now
+
+
+then after the parameters the fucntion is just a simple return
+
+its strucuture is like
+```typescript
+export default function RootLayout(parameters){
+  return (
+    //html code snippet
+  )
+};
+```
+thats itt
+
+
+now , i needed a navbar
+
+traditionally in html we used to do 
+```html
+<nav style="" ..> </nav>
+```
+to create a navigation link
+and we used to put it inside a div container to then give
+that div container a specific style type, or id or class
+and then define that class in css and then use that nav bar
+
+very tedious yes but ik it , so smt against the ai heh
+
+
+but oka then what
+how did next js improve it?
+
+well it didnt tbh it just made the language like object oreinted
+programming, like u can define fucntion and many more thing easily heh
+
+
+so u create a function called as Navbar which takes in parameters
+as navItems
+
+navItems is a list of dict or like
+```typescript
+navItems = [ {type1:val1, type2,val2} , {type1:val1, type2:val2}]
+```
+
+and the function navbar just unpacks this navitems to give specific navigation bar
+
+
+now u can just call it in RootLayout function as 
+```typescript
+<Navbar />
+```
+
+and then dont forget to pass it the items
+
+```typescript
+<Navbar items={navItems}>
+```
+
+funny thing while writing the params of Navbar function 
+we can actually define what we need on LHS of equals to 
+
+like 
+in our case its 
+```typescript
+function Navbar ({items}: {items : typeof navItems}){...}
+```
+
+so thats what i did in day 2
+
+very less time i got , yet i did what i can in the time
+peace , 29-10-2026:01:35AM
